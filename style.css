@@ -1,0 +1,399 @@
+/* style.css */
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #444;
+    background-color: #f8fafd; /* Um azul muito claro */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cores da Paleta:
+   Principal: #2C3E50 (Azul Escuro - Quase preto)
+   Secundária: #3A7CA5 (Azul Médio)
+   Destaque: #FFB300 (Amarelo/Laranja Dourado)
+   Neutros: #F8F9FA, #FFFFFF, #E0E7E9
+*/
+
+/* Header */
+.header {
+    background-color: #FFFFFF;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #2C3E50;
+    text-decoration: none;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #3A7CA5; /* Azul Médio */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #2C3E50, #3A7CA5); /* Degradê Azul Escuro para Azul Médio */
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (min-width: 768px) {
+    .hero .container {
+        flex-direction: row;
+        text-align: left;
+    }
+    .hero-content {
+        flex: 1;
+    }
+    .hero-image {
+        flex: 1;
+        text-align: right;
+    }
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 52px;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    line-height: 1.5;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões */
+.button-primary {
+    display: inline-block;
+    padding: 18px 40px;
+    border-radius: 50px; /* Mais arredondado */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: #FFB300; /* Amarelo Dourado */
+    color: #2C3E50; /* Texto em Azul Escuro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: #FFC107; /* Tom um pouco mais claro no hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Features/Soluções Section */
+.features {
+    padding: 80px 0;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.features h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #2C3E50;
+    margin-bottom: 60px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-item {
+    background-color: #F8F9FA; /* Cinza muito claro */
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-feature {
+    color: #3A7CA5; /* Azul Médio */
+    margin-bottom: 25px;
+    font-size: 60px; /* Tamanho do ícone */
+}
+
+.feature-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* About Us/Benefícios Section */
+.about-us {
+    padding: 80px 0;
+    background-color: #E0E7E9; /* Cinza azulado claro */
+    text-align: center;
+}
+
+.about-us h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #2C3E50;
+    margin-bottom: 40px;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.benefit-item {
+    background-color: #FFFFFF;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.icon-benefit {
+    color: #FFB300; /* Amarelo Dourado */
+    margin-bottom: 15px;
+}
+
+.benefit-item p {
+    margin-bottom: 0; /* Remove margem padrão */
+    font-size: 17px;
+    color: #333;
+}
+
+.benefit-item p strong {
+    color: #2C3E50;
+}
+
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: #2C3E50; /* Azul Escuro */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.call-to-action p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo quase branco */
+    color: #333;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #FFB300; /* Amarelo Dourado */
+    color: #2C3E50;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #FFC107;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    background-color: #1A2633; /* Um tom mais escuro do azul escuro */
+    color: #E0E7E9;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer .social-media a {
+    color: #E0E7E9;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 22px; /* Tamanho dos ícones sociais */
+    transition: color 0.3s ease;
+}
+
+.footer .social-media a:hover {
+    color: #FFB300; /* Amarelo Dourado no hover */
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+
+    .features h2, .about-us h2, .call-to-action h2 {
+        font-size: 32px;
+    }
+
+    .feature-grid, .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 0 15px; /* Padding para o formulário em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    .button-primary {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+}
